@@ -13,10 +13,20 @@ def load_data():
     y = data[:, -1:]
     return X, y
 
+def load_data_HVDC():
+    data = np.loadtxt("data/TESTLOCATION.txt");
+    Resistance = data[:,0];
+    location=data[:,5];
+    V1=data[:,1];
+    V2=data[:,2];
+    V3=data[:,3];
+    V4=data[:,4];
+    return Resistance,location,V1,V2,V3,V4
 
 if __name__ == "__main__":
 
     X, y = load_data()
+    #Resistance,location,V1,V2,V3,V4=load_data_HVDC();
 
     model = Sequential()
     rbflayer = RBFLayer(10,
