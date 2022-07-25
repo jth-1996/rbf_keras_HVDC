@@ -40,7 +40,7 @@ if __name__ == "__main__":
                   optimizer=RMSprop())
 
     model.fit(X, y,
-              batch_size=50,
+              batch_size=52,
               epochs=2000,
               verbose=1)
 
